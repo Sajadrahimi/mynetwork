@@ -1,0 +1,16 @@
+.idea/
+.idea
+.vscode/
+.vscode
+venv
+venv/
+media_root/
+media_root
+static
+static/
+tmp/
+tmp
+locust_tests/
+locust_tests
+*.py[co]
+local_settings.py
