@@ -6,8 +6,8 @@ venv
 venv/
 media_root/
 media_root
-static
-static/
+static_root
+static_root/
 tmp/
 tmp
 locust_tests/
