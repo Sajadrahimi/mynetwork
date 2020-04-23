@@ -37,8 +37,10 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
+	'rest_framework',
+	'channels',
 ]
-
+ASGI_APPLICATION = "backend.routing.application"
 ## PYTHON SOCIAL AUTH SETTINGS ###
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 SOCIAL_AUTH_URL_NAMESPACE = 'social-auth'

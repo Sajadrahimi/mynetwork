@@ -17,8 +17,13 @@ from backend import settings
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from rest_framework_jwt.views import obtain_jwt_token, verify_jwt_token
 
 urlpatterns = [
+				  path(r'api-auth/', include('rest_framework.urls')),
+				  path(r'api-token-auth/', obtain_jwt_token, name='token_login'),
+				  path(r'api-token-verify/', verify_jwt_token),
+				  path(r'', include('users.urls')),
 				  path(r'auth/', include('social_django.urls', namespace='social-auth')),
 				  path('admin/', admin.site.urls),
 			  ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
